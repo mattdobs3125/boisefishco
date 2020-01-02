@@ -2,23 +2,21 @@
   
 <template>
     <div id="app">
-            <div>
-                <input type="text" v-model="name" placeholder="Your name?" />
-                <h5>Hello, {{name}}</h5>
+          <div class="row">
+            <div class="col-12">
+                <h1> cool look AT ME</h1>
             </div>
+          </div>
         </div>
 </template>
 
-<script>
 
- new Vue({
-                template: '#app',
-                data: function() {
-                    return {
-                        name: ''
-                    }
-                }
-            }).$mount('#app');
+
+<script>
+export default{
+
+}
+
 </script>
 
 <style>
