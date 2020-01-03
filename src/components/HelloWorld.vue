@@ -30,7 +30,7 @@
 
     <v-app-bar
       app
-      color="cyan"
+      color="blue"
       dark
     >
       <v-spacer />
@@ -71,7 +71,7 @@
     </v-content>
 
     <v-footer
-      color="cyan"
+      color="orange"
       app
     >
       <v-spacer />
