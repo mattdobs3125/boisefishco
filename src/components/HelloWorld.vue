@@ -12,7 +12,7 @@
           </v-list-item-action>
 
           <v-list-item-content>
-            <v-list-item-title>Home</v-list-item-title>
+            <router-link to="/">Home</router-link> 
           </v-list-item-content>
         </v-list-item>
 
@@ -22,7 +22,7 @@
           </v-list-item-action>
 
           <v-list-item-content>
-            <v-list-item-title>Login</v-list-item-title>
+            <router-link to="/about">About</router-link>
           </v-list-item-content>
         </v-list-item>
       </v-list>

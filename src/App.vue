@@ -5,24 +5,12 @@
       color="primary"
       dark
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+        <router-link to="/" tag="button" id='home-button'> Home </router-link>
+        <v-btn v-if='authenticated' v-on:click='logout' id='logout-button'>logout</v-btn>
+        <v-btn v-else v-on:click='login' id='login-button'>logout</v-btn>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+      <div class="d-flex align-center">
+   
       </div>
 
       <v-spacer></v-spacer>
@@ -46,10 +34,34 @@
 <script>
 
 export default {
-  name: 'App',
+  name: 'app',
+  data: function () {
+    return {
+      authenticated: false
+    }
+  },
+  created () {
+    this.isAuthenticated()
+  },
+  watch: {
+    // Everytime the route changes, check for auth status
+    '$route': 'isAuthenticated'
+  },
+  methods: {
+    async isAuthenticated () {
+      this.authenticated = await this.$auth.isAuthenticated()
+    },
+    login () {
+      this.$auth.loginRedirect('/')
+    },
+    async logout () {
+      await this.$auth.logout()
+      await this.isAuthenticated()
 
-  data: () => ({
-    //
-  }),
-};
+      // Navigate back to home
+      this.$router.push({ path: '/' })
+    }
+  }
+}
+ 
 </script>
