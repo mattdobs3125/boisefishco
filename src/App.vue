@@ -5,9 +5,19 @@
       color="primary"
       dark
     >
-        <router-link to="/" tag="button" id='home-button'> Home </router-link>
-        <v-btn v-if='authenticated' v-on:click='logout' id='logout-button'>logout</v-btn>
-        <v-btn v-else v-on:click='login' id='login-button'>logout</v-btn>
+    
+        <button v-on:click='logout' type="button" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined theme--light elevation-0 v-size--default orange--text text--accent-4" >
+          <span class="v-btn__content">
+            <span>Logout</span>
+            </span>
+            </button>
+        <button type="button" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined theme--light elevation-0 v-size--default orange--text text--accent-4" >
+          <span class="v-btn__content">
+            <span>Login</span>
+            </span>
+            </button>
+     
+  
 
       <div class="d-flex align-center">
    
@@ -15,14 +25,8 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      
+      
     </v-app-bar>
 
     <v-content>
