@@ -1,38 +1,7 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="#ffd149"
-      dark
-    >
-    
-        <button v-on:click='logout' type="button" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined theme--light elevation-0 v-size--default orange--text text--accent-4" >
-          <span class="v-btn__content">
-            <span>Logout</span>
-            </span>
-            </button>
-        <button type="button" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined theme--light elevation-0 v-size--default orange--text text--accent-4" >
-          <span class="v-btn__content">
-            <span>Login</span>
-            </span>
-            </button>
-     
-  
-
-      <div class="d-flex align-center">
-   
-      </div>
-
-      <v-spacer></v-spacer>
-
-      
-      
-    </v-app-bar>
-
-    <v-content>
-      <router-view/>
-    </v-content>
-  </v-app>
+ <v-app>
+   <Nav/>
+ </v-app>
 </template>
 
 <script>

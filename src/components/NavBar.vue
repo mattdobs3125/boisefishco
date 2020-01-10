@@ -52,6 +52,7 @@
         >
           <v-col class="text-center">
             <v-tooltip left>
+                
               <template v-slot:activator="{ on }">
              
               </template>
@@ -85,8 +86,17 @@
 
 <script>
 export default {
+        name: 'LayoutsDemosBaselineFlipped',
+    props: {
+      source: String,
+    },
+    data: () => ({
+      drawer: null,
+    }),
+  }
 
-}
+
+
 </script>
 
 <style>

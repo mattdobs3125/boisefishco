@@ -1,6 +1,7 @@
 <template>
   <v-app>
-  <HelloWorld />
+  
+  <NavBar/>
     <v-content>
       <v-container>
         <v-img
@@ -15,13 +16,15 @@
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld';
+
+import NavBar from '../components/NavBar';
 
 export default {
   name: 'Home',
 
   components: {
-    HelloWorld,
+    
+    NavBar
   },
 };
 </script>

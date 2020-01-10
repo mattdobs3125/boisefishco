@@ -1,10 +1,16 @@
 <template>
   <v-app>
+    <!-- <NavBar/> -->
     <v-content>
       <v-container>
-        <button type="button" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined theme--light elevation-0 v-size--default deep-purple--text text--accent-4" undefined="true">
+         <button v-on:click='logout' type="button" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined theme--light elevation-0 v-size--default orange--text text--accent-4" >
           <span class="v-btn__content">
-            <span>Click Me</span>
+            <span>Logout</span>
+            </span>
+            </button>
+        <button type="button" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined theme--light elevation-0 v-size--default orange--text text--accent-4" >
+          <span class="v-btn__content">
+            <span>Login</span>
             </span>
             </button>
       </v-container>
@@ -15,32 +21,36 @@
 </template>
 
 <script>
+// import NavBar from '../components/NavBar';
 
 export default {
+  
   name: 'app',
-  data () {
+  data: function () {
     return {
-      activeUser: null
+      authenticated: false
     }
   },
-  async created () {
-    await this.refreshActiveUser()
+  created () {
+    this.isAuthenticated()
   },
   watch: {
-    // everytime a route is changed refresh the activeUser
-    '$route': 'refreshActiveUser'
+    // Everytime the route changes, check for auth status
+    '$route': 'isAuthenticated'
   },
   methods: {
-    login () {
-      this.$auth.loginRedirect()
+    async isAuthenticated () {
+      this.authenticated = await this.$auth.isAuthenticated()
     },
-    async refreshActiveUser () {
-      this.activeUser = await this.$auth.getUser()
+    login () {
+      this.$auth.loginRedirect('/')
     },
     async logout () {
       await this.$auth.logout()
-      await this.refreshActiveUser()
-      this.$router.push('/')
+      await this.isAuthenticated()
+
+      // Navigate back to home
+      this.$router.push({ path: '/' })
     }
   }
 }
