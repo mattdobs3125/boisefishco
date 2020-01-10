@@ -1,4 +1,5 @@
-<template>
+
+    <template>
   <v-app id="inspire">
     <v-navigation-drawer
       v-model="drawer"
@@ -22,7 +23,7 @@
           </v-list-item-action>
 
           <v-list-item-content>
-            <router-link to="/about">About</router-link>
+            <router-link to="/about">Login</router-link>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -81,14 +82,13 @@
   </v-app>
 </template>
 
+
 <script>
-  export default {
-    name: 'LayoutsDemosBaselineFlipped',
-    props: {
-      source: String,
-    },
-    data: () => ({
-      drawer: null,
-    }),
-  }
+export default {
+
+}
 </script>
+
+<style>
+
+</style>

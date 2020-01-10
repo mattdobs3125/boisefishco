@@ -3,11 +3,12 @@
   <HelloWorld />
     <v-content>
       <v-container>
-        <button type="button" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined theme--light elevation-0 v-size--default deep-purple--text text--accent-4" undefined="true">
-          <span class="v-btn__content">
-            <span>Click Me</span>
-            </span>
-            </button>
+        <v-img
+        scr="https://wallpaperplay.com/walls/full/c/5/e/273056.jpg"
+        max-width="500"
+      max-height="300"
+      aspect-ratio = "1"
+        ></v-img>
       </v-container>
     </v-content>
   </v-app>
