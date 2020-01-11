@@ -1,6 +1,6 @@
 <template>
  <v-app>
-   <Nav/>
+   
  </v-app>
 </template>
 
