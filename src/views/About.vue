@@ -8,7 +8,7 @@
             <span>Logout</span>
             </span>
             </button>
-        <button type="button" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined theme--light elevation-0 v-size--default orange--text text--accent-4" >
+        <button v-on:click ='login' type="button" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined theme--light elevation-0 v-size--default orange--text text--accent-4" >
           <span class="v-btn__content">
             <span>Login</span>
             </span>

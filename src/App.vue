@@ -22,19 +22,19 @@ export default {
     '$route': 'isAuthenticated'
   },
   methods: {
-    async isAuthenticated () {
-      this.authenticated = await this.$auth.isAuthenticated()
-    },
-    login () {
-      this.$auth.loginRedirect('/')
-    },
-    async logout () {
-      await this.$auth.logout()
-      await this.isAuthenticated()
+    // async isAuthenticated () {
+    //   this.authenticated = await this.$auth.isAuthenticated()
+    // },
+    // login () {
+    //   this.$auth.loginRedirect('/')
+    // },
+    // async logout () {
+    //   await this.$auth.logout()
+    //   await this.isAuthenticated()
 
-      // Navigate back to home
-      this.$router.push({ path: '/' })
-    },
+    //   // Navigate back to home
+    //   this.$router.push({ path: '/' })
+    // },
     // async created () {
     // axios.defaults.headers.common['Authorization'] = `Bearer ${await this.$auth.getAccessToken()}`
     // try {
