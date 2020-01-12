@@ -23,7 +23,7 @@ let router = new Router({
     },
 
     {
-      path: '/implicit/callback',
+      path: '/',
       component: Auth.handleCallback()
       
     },
