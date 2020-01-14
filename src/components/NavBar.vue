@@ -23,7 +23,7 @@
           </v-list-item-action>
 
           <v-list-item-content>
-            <router-link to="/about">Login</router-link>
+            <router-link to="/login">Login</router-link>
           </v-list-item-content>
         </v-list-item>
       </v-list>

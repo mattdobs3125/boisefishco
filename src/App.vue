@@ -14,13 +14,8 @@ export default {
       authenticated: false
     }
   },
-  created () {
-    this.isAuthenticated()
-  },
-  watch: {
-    
-    '$route': 'isAuthenticated'
-  },
+  
+
   methods: {
 
   }
