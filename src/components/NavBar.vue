@@ -9,7 +9,7 @@
       <v-list dense>
         <v-list-item link>
           <v-list-item-action>
-            <v-icon>mdi-home</v-icon>
+          
           </v-list-item-action>
 
           <v-list-item-content>
@@ -19,7 +19,7 @@
 
         <v-list-item link>
           <v-list-item-action>
-            <v-icon>mdi-contact-mail</v-icon>
+            
           </v-list-item-action>
 
           <v-list-item-content>

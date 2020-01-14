@@ -18,33 +18,11 @@ export default {
     this.isAuthenticated()
   },
   watch: {
-    // Everytime the route changes, check for auth status
+    
     '$route': 'isAuthenticated'
   },
   methods: {
-    // async isAuthenticated () {
-    //   this.authenticated = await this.$auth.isAuthenticated()
-    // },
-    // login () {
-    //   this.$auth.loginRedirect('/')
-    // },
-    // async logout () {
-    //   await this.$auth.logout()
-    //   await this.isAuthenticated()
 
-    //   // Navigate back to home
-    //   this.$router.push({ path: '/' })
-    // },
-    // async created () {
-    // axios.defaults.headers.common['Authorization'] = `Bearer ${await this.$auth.getAccessToken()}`
-    // try {
-    //   const response = await axios.get(`http://localhost:8082/api/messages`)
-    //   this.posts = response.data
-    // } catch (e) {
-    //   console.log(`Errors! ${e}`)
-    // }
-  
-    // }
   }
 }
  
