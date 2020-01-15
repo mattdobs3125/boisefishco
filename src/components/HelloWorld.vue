@@ -6,12 +6,6 @@
 
 <script>
   export default {
-    name: 'LayoutsDemosBaselineFlipped',
-    props: {
-      source: String,
-    },
-    data: () => ({
-      drawer: null,
-    }),
+
   }
 </script>
